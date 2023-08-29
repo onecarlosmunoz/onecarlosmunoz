@@ -146,18 +146,18 @@ function App() {
             Hi, I’m Juan Carlos!
           </h1>
           <p className="text-body lg:text-xl md:text-lg sm:text-base text-sm text-center opacity-80 lg:mt-5 md:mt-3 mt-1">
-            Check out my work experience and projects below (⊙_⊙;)
+            Check out my work experience and projects below (👇ﾟヮﾟ)👇
           </p>
           <div className="flex justify-center">
             <div className="bg-slate-200 lg:my-24 md:my-12 sm:my-10 my-10 w-14 h-1"></div>
           </div>
           {/*  */}
-          <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 hover:bg-slate-50 sm:bg-white bg-white transition ease-in-out">
+          <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 sm:hover:bg-slate-50 hover:bg-white sm:bg-white bg-white transition ease-in-out">
             <div
               href="#"
-              className="flex flex-row hover:scale-[0.99] transition ease-in-out"
+              className="flex flex-row sm:hover:scale-[0.99] hover:scale-1 transition ease-in-out"
             >
-              <div className="sm:basis-2/12 basis-12 gradient-background sm:rounded-3xl rounded-lg bg-cover"></div>
+              <div className="sm:basis-2/12 basis-20 gradient-background sm:rounded-3xl rounded-lg bg-cover"></div>
               <div className="sm:basis-10/12 basis-auto sm:pt-2 pt-0 sm:ps-5 ps-5">
                 <div className="flex content-center flex-wrap">
                   <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose">
@@ -312,7 +312,7 @@ function App() {
                   front-end web development.
                 </h4>
               </div>
-              <div className="text-body lg:text-lg md:text-base text-sm opacity-80 mt-5">
+              <div className="text-body lg:text-lg md:text-base text-sm opacity-80 sm:mt-5 mt-3">
                 I'm most passionate about solving problems, bringing designs to
                 life, and crafting awesome user experiences.
                 <br></br>
