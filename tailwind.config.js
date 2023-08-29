@@ -1,0 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+      colors: {
+        'header': '#000000',
+        'body': '#1D242B',
+      }
+    },
+  },
+  plugins: [],
+}
