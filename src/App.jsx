@@ -37,7 +37,7 @@ function App() {
     setActiveSection(newActiveSection);
     // console.log(activeSection);
   };
-  
+
   const horizontalPhotos = [
     { url: "/horizontal-1.jpg", location: "Catbalogan, Samar", id: 1 },
     { url: "/horizontal-2.jpg", location: "Tacloban, Leyte", id: 2 },
@@ -47,9 +47,9 @@ function App() {
     { url: "/horizontal-6.jpg", location: "Mandaluyong City, NCR", id: 6 },
     { url: "/horizontal-7.jpg", location: "Catbalogan, Samar", id: 7 },
     { url: "/horizontal-8.jpg", location: "Catbalogan, Samar", id: 8 },
-    { url: "/horizontal-9.jpg", location: "Catbalogan, Samar", id: 9 }
+    { url: "/horizontal-9.jpg", location: "Catbalogan, Samar", id: 9 },
   ];
-  
+
   const verticalPhotos = [
     { url: "/vertical-1.jpg", location: "Palo, Leyte", id: 1 },
     { url: "/vertical-2.jpg", location: "Catbalogan, Samar", id: 2 },
@@ -88,10 +88,6 @@ function App() {
     };
   }, []);
 
-  const handleNavClick = (text) => {
-    setActiveSection(text);
-  };
-
   const accentureSkills = [
     "HTML",
     "CSS",
@@ -116,7 +112,7 @@ function App() {
       <div className="w-full flex justify-center fixed lg:mt-10 md:mt-6 mt-4 z-50 ">
         <div
           className={
-            "bg-white sm:px-4 sm:py-4 px-2 py-3 rounded-full" +
+            "animate-object nav sm:px-4 sm:py-4 px-2 py-3 rounded-full" +
             (scrolled == 2
               ? " nav-fade-in"
               : scrolled == 1
@@ -142,23 +138,23 @@ function App() {
       </div>
       <div className="container max-w-screen-lg mx-auto flex flex-col justify-center">
         <section id="work" className="lg:px-16 md:px-8 px-6">
-          <h1 className="lg:text-8xl md:text-6xl sm:text-5xl text-3xl font-poppins font-bold text-black tracking-tighter text-center lg:mt-48 md:mt-32 sm:mt-28 mt-24 leading-tight">
+          <h1 className="animate-object-03 lg:text-8xl md:text-6xl sm:text-5xl text-3xl font-poppins font-bold text-black tracking-tighter text-center lg:mt-48 md:mt-32 sm:mt-28 mt-24 leading-tight">
             Hi, I’m Juan Carlos!
           </h1>
-          <p className="text-body lg:text-xl md:text-lg sm:text-base text-sm text-center opacity-80 lg:mt-5 md:mt-3 mt-1">
+          <p className="animate-object-05 text-body lg:text-xl md:text-lg sm:text-base text-sm text-center opacity-80 lg:mt-5 md:mt-3 mt-1">
             Check out my work experience and projects below (👇ﾟヮﾟ)👇
           </p>
           <div className="flex justify-center">
-            <div className="bg-slate-200 lg:my-24 md:my-12 sm:my-10 my-10 w-14 h-1"></div>
+            <div className="bg-slate-200 lg:my-24 md:my-12 sm:my-10 my-10 animate-object-06 h-1"></div>
           </div>
           {/*  */}
-          <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 sm:hover:bg-slate-50 hover:bg-white sm:bg-white bg-white transition ease-in-out">
+          <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 sm:hover:bg-slate-50 hover:bg-white sm:bg-transparent bg-white transition ease-in-out">
             <div
               href="#"
               className="flex flex-row sm:hover:scale-[0.99] hover:scale-1 transition ease-in-out"
             >
-              <div className="sm:basis-2/12 basis-20 gradient-background sm:rounded-3xl rounded-lg bg-cover"></div>
-              <div className="sm:basis-10/12 basis-auto sm:pt-2 pt-0 sm:ps-5 ps-5">
+              <div className="sm:basis-2/12 basis-20 gradient-background sm:rounded-3xl rounded-lg bg-cover animate-object-09"></div>
+              <div className="sm:basis-10/12 basis-auto sm:pt-2 pt-0 sm:ps-5 ps-5 animate-object-11">
                 <div className="flex content-center flex-wrap">
                   <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose">
                     Accenture Inc - Avanade
@@ -218,9 +214,9 @@ function App() {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="bg-slate-200 sm:my-10 my-8 sm:w-8 w-12 h-1"></div>
+            <div className="bg-slate-200 sm:my-10 my-8 animate-object-12 h-1"></div>
           </div>
-          <div className="sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-white bg-slate-50 transition ease-in-out">
+          <div className="animate-object-14 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-transparent bg-slate-50 transition ease-in-out">
             <a
               href="#"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
@@ -228,11 +224,11 @@ function App() {
               <div className="sm:basis-2/12 basis-0 bg-[url('/vasquez.png')] sm:rounded-3xl rounded-lg bg-cover bg-right"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
                 <div className="flex content-bottom">
-                <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose">
+                  <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose underline">
                     Vasquez BPO
                   </h4>
                   <div className="border border-solid border-black border-opacity-30 rounded-xl ms-2 mb-0 pb-0">
-                  <p className="lg:text-sm md:text-cs text-xs font-rubik text-black align-middle text-opacity-80 flex px-2 py-1 tracking-tighter">
+                    <p className="lg:text-sm md:text-cs text-xs font-rubik text-black align-middle text-opacity-80 flex px-2 py-1 tracking-tighter">
                       2020
                     </p>
                   </div>
@@ -256,7 +252,7 @@ function App() {
               </div>
             </a>
           </div>
-          <div className="sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-white bg-slate-50 transition ease-in-out mt-10">
+          <div className="animate-object-16 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-white bg-slate-50 transition ease-in-out mt-10">
             <a
               href="#"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
@@ -264,8 +260,8 @@ function App() {
               <div className="sm:basis-2/12 basis-0 bg-[url('/cathy.png')] sm:rounded-3xl rounded-lg bg-cover bg-left"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
                 <div className="flex content-bottom">
-                <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose">
-                    Catherine Tan
+                  <h4 className="lg:text-xl md:text-lg sm:text-base text-sm font-rubik font-bold text-header md:leading-normal leading-loose underline">
+                    CTDL's Personal Site
                   </h4>
                   <div className="border border-solid border-black border-opacity-30 rounded-xl ms-2 mb-0 pb-0">
                     <p className="lg:text-sm md:text-cs text-xs font-rubik text-black align-middle text-opacity-80 flex px-2 py-1 tracking-tighter">
@@ -277,8 +273,8 @@ function App() {
                   Freelance Web Developer
                 </p>
                 <p className="text-body lg:text-base md:text-sm text-sm opacity-80 lg:mt-5 md:mt-4 mt-4">
-                  A personal web site created with Webflow. This project is
-                  still a work in progress.
+                  A personal web site for a client. Created with Webflow. This
+                  project is still a work in progress.
                 </p>
                 <div className="flex flex-row flex-wrap lg:mt-6 md:mt-5 mt-5">
                   {accentureSkills.splice(0, 3).map((x) => (
@@ -293,7 +289,7 @@ function App() {
             </a>
           </div>
         </section>
-        <section id="about" className="lg:px-16 md:px-8 px-6">
+        <section id="about" className="lg:px-16 md:px-8 px-6 animate-object-18">
           <h1 className="lg:text-8xl md:text-6xl sm:text-5xl text-3xl font-poppins font-bold text-black tracking-tighter text-center lg:mt-48 md:mt-32 sm:mt-28 mt-24 leading-tight">
             Hi again, I’m Chino.
           </h1>
@@ -330,8 +326,7 @@ function App() {
             </div>
           </div>
           <div className="flex flex-row sm:mt-8 mt-4">
-            {
-              randomHorizontal && 
+            {randomHorizontal && (
               <div className="basis-8/12 sm:rounded-3xl rounded-lg bg-black w-full relative">
                 <img
                   src={randomHorizontal.url}
@@ -340,22 +335,26 @@ function App() {
                   srcset=""
                 />
                 <div className="absolute w-full h-full top-0 flex flex-col justify-end content-start opacity-0 hover:opacity-100 translate-y-1 hover:translate-y-0 transition ease-in-out">
-                  <div className="bg-slate-50 font-inter text-sm font-medium text-black flex-initial w-fit mx-5 my-5 px-3 py-2 rounded-xl">
+                  <div className="bg-slate-50 font-inter lg:text-sm md:text-cs text-xs font-medium text-black flex-initial w-fit sm:mb-5 sm:ms-5 sm:px-3 sm:py-2 mb-3 ms-2 px-3 py-1 rounded-xl">
                     {randomHorizontal.location}
                   </div>
                 </div>
               </div>
-            }
-            {
-              randomVertical &&
-              <div className={"basis-4/12 sm:rounded-3xl rounded-lg bg-contain bg-center sm:ms-5 ms-2 relative"} style={{backgroundImage: `url(${randomVertical.url})`}}>
+            )}
+            {randomVertical && (
+              <div
+                className={
+                  "basis-4/12 sm:rounded-3xl rounded-lg bg-contain bg-center sm:ms-5 ms-2 relative"
+                }
+                style={{ backgroundImage: `url(${randomVertical.url})` }}
+              >
                 <div className="absolute w-full h-full top-0 flex flex-col justify-end content-start opacity-0 hover:opacity-100 translate-y-1 hover:translate-y-0 transition ease-in-out">
-                  <div className="bg-slate-50 font-inter text-sm font-medium text-black flex-initial w-fit mx-5 my-5 px-3 py-2 rounded-xl">
+                  <div className="bg-slate-50 font-inter lg:text-sm md:text-cs text-xs font-medium text-black flex-initial w-fit sm:mb-5 sm:mx-5 sm:px-3 sm:py-2 mb-3 mx-2 px-3 py-1 rounded-xl">
                     {randomVertical.location}
                   </div>
                 </div>
               </div>
-            }
+            )}
           </div>
           {/* <p className='text-body text-lg opacity-80 mt-8 pb-12'>
             There used to be this website called Friendster, a now defunct social media platform that was famous back in the mid-2000s. All my friends had crazy profiles and mine looked... basic. I forced myself to understand HTML and CSS and by the end of it all, I had the most kick-ass looking profile in all of Friendster. Except no one else saw it because everyone already moved to Facebook. 
@@ -385,11 +384,11 @@ function App() {
               <br></br>
               Outside work, I enjoy playing and listening to music, failing
               ability checks in Baldur's Gate 3, exploring Samar and Leyte with
-              my partner, and taking pictures.
+              my partner, and indulging in my passion for photography.
             </p>
           </div>
         </section>
-        <section id="contact" className="lg:px-16 md:px-8 sm:px-6 px-0">
+        <section id="contact" className="lg:px-16 md:px-8 sm:px-6 px-0 animate-object-20">
           <h1 className="lg:text-8xl md:text-6xl sm:text-5xl text-3xl font-poppins font-bold text-black tracking-tighter text-center lg:mt-48 md:mt-32 sm:mt-28 mt-24 leading-tight">
             Get in touch.
           </h1>
@@ -405,7 +404,7 @@ function App() {
                 say hi!
               </h2>
               <a
-                className="md:text-2xl sm:text-xl text-base font-rubik text-white tracking-tight hover:underline"
+                className="md:text-2xl sm:text-xl text-base font-rubik text-white tracking-tight underline"
                 href="mailto:onecarlosmunoz@gmail.com"
               >
                 onecarlosmunoz@gmail.com
@@ -414,13 +413,24 @@ function App() {
                 +63 977 428 7477
               </p>
               <div className="bg-white mt-6 mb-10 w-14 h-1"></div>
-              <p className="md:text-base sm:text-sm text-sm text-white">Juan Carlos T. Muñoz</p>
+              <p className="md:text-base sm:text-sm text-sm text-white">
+                Juan Carlos T. Muñoz
+              </p>
               <p className="md:text-base sm:text-sm text-sm text-white sm:mb-20 mb-10">
-                Makati City, Philippines
+                Catbalogan, Samar
               </p>
               <a href="https://www.linkedin.com/in/munozjuancarlos/">
-                <img src="/linkedin.svg" alt="" srcset="" title="test" className='sm:h-fit h-6'/>
+                <img
+                  src="/linkedin.svg"
+                  alt=""
+                  srcset=""
+                  title="test"
+                  className="sm:h-fit h-6"
+                />
               </a>
+              <p className="sm:text-sm text-xs text-white mt-10">
+                © 2023 Juan Carlos Muñoz
+              </p>
               {/* © 2023 Juan Carlos Muñoz */}
             </div>
             <div className="sm:basis-6/12 basis-auto bg-[url('/chino-1.jpg')] sm:rounded-r-3xl rounded-r-0 bg-cover bg-center sm:h-auto h-64"></div>
