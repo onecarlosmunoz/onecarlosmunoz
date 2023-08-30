@@ -112,7 +112,7 @@ function App() {
       <div className="w-full flex justify-center fixed lg:mt-10 md:mt-6 mt-4 z-50 ">
         <div
           className={
-            "animate-object nav sm:px-4 sm:py-4 px-2 py-3 rounded-full" +
+            "transition-all animate-object nav sm:px-4 sm:py-4 px-2 py-3 rounded-full" +
             (scrolled == 2
               ? " nav-fade-in"
               : scrolled == 1
@@ -152,7 +152,7 @@ function App() {
           <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 sm:hover:bg-slate-50 hover:bg-white sm:bg-transparent bg-white transition ease-in-out">
             <div
               href="#"
-              className="flex flex-row sm:hover:scale-[0.99] hover:scale-1 transition ease-in-out"
+              className="flex flex-row transition ease-in-out"
             >
               <div className="sm:basis-2/12 basis-20 gradient-background sm:rounded-3xl rounded-lg bg-cover animate-object-09"></div>
               <div className="sm:basis-10/12 basis-auto sm:pt-2 pt-0 sm:ps-5 ps-5 animate-object-11">
@@ -219,8 +219,9 @@ function App() {
           </div>
           <div className="animate-object-14 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-transparent bg-slate-50 transition ease-in-out">
             <a
-              href="#"
+              href="https://vasquezbpo.com/"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
+              target="_blank"
             >
               <div className="sm:basis-2/12 basis-0 bg-[url('/vasquez.png')] sm:rounded-3xl rounded-lg bg-cover bg-right"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
@@ -254,9 +255,10 @@ function App() {
             </a>
           </div>
           <div className="animate-object-16 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-white bg-slate-50 transition ease-in-out mt-10">
-            <a
-              href="#"
+          <a
+              href="https://catherine-tans-website.webflow.io/"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
+              target="_blank"
             >
               <div className="sm:basis-2/12 basis-0 bg-[url('/cathy.png')] sm:rounded-3xl rounded-lg bg-cover bg-left"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
