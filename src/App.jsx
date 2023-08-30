@@ -39,27 +39,27 @@ function App() {
   };
 
   const horizontalPhotos = [
-    { url: "/horizontal-1.jpg", location: "Catbalogan, Samar", id: 1 },
-    { url: "/horizontal-2.jpg", location: "Tacloban, Leyte", id: 2 },
-    { url: "/horizontal-3.jpg", location: "BGC, NCR", id: 3 },
-    { url: "/horizontal-4.jpg", location: "Metro Manila, NCR", id: 4 },
-    { url: "/horizontal-5.jpg", location: "Quezon City, NCR", id: 5 },
-    { url: "/horizontal-6.jpg", location: "Mandaluyong, NCR", id: 6 },
-    { url: "/horizontal-7.jpg", location: "Catbalogan, Samar", id: 7 },
-    { url: "/horizontal-8.jpg", location: "Catbalogan, Samar", id: 8 },
-    { url: "/horizontal-9.jpg", location: "Catbalogan, Samar", id: 9 },
+    { url: "/horizontal-1.jpg", location: "Catbalogan, Samar", alt: "Seats for Shadows", id: 1 },
+    { url: "/horizontal-2.jpg", location: "Tacloban, Leyte", alt: "Cripsy Neon", id: 2 },
+    { url: "/horizontal-3.jpg", location: "BGC, NCR", alt: "Gacha", id: 3 },
+    { url: "/horizontal-4.jpg", location: "Metro Manila, NCR", alt: "Intersection", id: 4 },
+    { url: "/horizontal-5.jpg", location: "Quezon City, NCR",alt: "The Manager",  id: 5 },
+    { url: "/horizontal-6.jpg", location: "Mandaluyong, NCR", alt: "Train Ride Home", id: 6 },
+    { url: "/horizontal-7.jpg", location: "Catbalogan, Samar", alt: "Basking", id: 7 },
+    { url: "/horizontal-8.jpg", location: "Catbalogan, Samar",alt: "The Yellow Ribbon",  id: 8 },
+    { url: "/horizontal-9.jpg", location: "Catbalogan, Samar", alt: "Toby", id: 9 },
   ];
 
   const verticalPhotos = [
-    { url: "/vertical-1.jpg", location: "Palo, Leyte", id: 1 },
-    { url: "/vertical-2.jpg", location: "Catbalogan, Samar", id: 2 },
-    { url: "/vertical-3.jpg", location: "Tacloban, Leyte", id: 3 },
-    { url: "/vertical-4.jpg", location: "Pasay, NCR", id: 4 },
-    { url: "/vertical-5.jpg", location: "Tacloban, Leyte", id: 5 },
-    { url: "/vertical-6.jpg", location: "Palo, Leyte", id: 6 },
-    { url: "/vertical-7.jpg", location: "Makati, NCR", id: 7 },
-    { url: "/vertical-8.jpg", location: "Catbalogan, Samar", id: 8 },
-    { url: "/vertical-9.jpg", location: "Makati, NCR", id: 9 },
+    { url: "/vertical-1.jpg", location: "Palo, Leyte", alt: "The Barrista", id: 1 },
+    { url: "/vertical-2.jpg", location: "Catbalogan, Samar", alt: "A Shallow Lamp", id: 2 },
+    { url: "/vertical-3.jpg", location: "Tacloban, Leyte", alt: "Coffee in Neon", id: 3 },
+    { url: "/vertical-4.jpg", location: "Pasay, NCR", alt: "The Airport", id: 4 },
+    { url: "/vertical-5.jpg", location: "Tacloban, Leyte", alt: "I'm Home", id: 5 },
+    { url: "/vertical-6.jpg", location: "Palo, Leyte", alt: "Dog in Film", id: 6 },
+    { url: "/vertical-7.jpg", location: "Makati, NCR", alt: "Raining in Makati", id: 7 },
+    { url: "/vertical-8.jpg", location: "Catbalogan, Samar", alt: "The Sky is a Canvas", id: 8 },
+    { url: "/vertical-9.jpg", location: "Makati, NCR", alt: "Flametrooper", id: 9 },
   ];
 
   const [randomHorizontal, setRandomHorizontal] = useState(null);
@@ -120,9 +120,10 @@ function App() {
               : "")
           }
         >
-          {navItems.map((x) => (
+          {navItems.map((x, key) => (
             <a
               href={x.href}
+              key={key}
               className={
                 "transition-all ease-in-out lg:text-base md:text-sm text-xs lg:px-6 md:px-4 px-4 py-2 " +
                 (x.text.toLowerCase() == activeSection
@@ -168,7 +169,7 @@ function App() {
                 <p className="lg:text-base md:text-sm text-sm font-rubik text-header mt-2 opacity-60">
                   Application Development Senior Analyst
                 </p>
-                <ul class="list-inside ps-0 list-[square] lg:mt-5 md:mt-4 mt-4">
+                <ul className="list-inside ps-0 list-[square] lg:mt-5 md:mt-4 mt-4">
                   <li className="text-body lg:text-base md:text-sm text-sm opacity-80 lg:mt-5 md:mt-4 mt-4">
                     Developed web applications using mainly React and ASP.NET
                     Web API with C#. Although I worked as a full-stack
@@ -202,8 +203,8 @@ function App() {
                   </li>
                 </ul>
                 <div className="flex flex-row flex-wrap lg:mt-6 md:mt-5 mt-5">
-                  {accentureSkills.map((x) => (
-                    <div className="bg-black rounded-full mb-2 me-1">
+                  {accentureSkills.map((x, key) => (
+                    <div className="bg-black rounded-full mb-2 me-1" key={key}>
                       <p className="text-xs font-rubik text-white align-middle flex px-4 py-2 pt-2 leading-none">
                         {x}
                       </p>
@@ -241,8 +242,8 @@ function App() {
                   the mobile view for this site was not a priority.
                 </p>
                 <div className="flex flex-row flex-wrap lg:mt-6 md:mt-5 mt-5">
-                  {accentureSkills.splice(0, 3).map((x) => (
-                    <div className="bg-black rounded-full mb-2 me-1">
+                  {accentureSkills.splice(0, 3).map((x, key) => (
+                    <div className="bg-black rounded-full mb-2 me-1" key={key}>
                       <p className="text-xs font-rubik text-white align-middle flex px-4 py-2 pt-2 leading-none">
                         {x}
                       </p>
@@ -277,8 +278,8 @@ function App() {
                   project is still a work in progress.
                 </p>
                 <div className="flex flex-row flex-wrap lg:mt-6 md:mt-5 mt-5">
-                  {accentureSkills.splice(0, 3).map((x) => (
-                    <div className="bg-black rounded-full mb-2 me-1">
+                  {accentureSkills.splice(0, 3).map((x, key) => (
+                    <div className="bg-black rounded-full mb-2 me-1" key={key}>
                       <p className="text-xs font-rubik text-white align-middle flex px-4 py-2 leading-none">
                         {x}
                       </p>
@@ -331,8 +332,7 @@ function App() {
                 <img
                   src={randomHorizontal.url}
                   className="sm:rounded-3xl rounded-lg"
-                  alt=""
-                  srcset=""
+                  alt={randomHorizontal.alt}
                 />
                 <div className="absolute w-full h-full top-0 flex flex-col justify-end content-start opacity-0 hover:opacity-100 translate-y-1 hover:translate-y-0 transition ease-in-out">
                   <div className="bg-slate-50 font-inter lg:text-sm md:text-cs text-xs font-medium text-black flex-initial w-fit sm:mb-5 sm:ms-5 sm:px-3 sm:py-2 mb-3 ms-2 px-3 py-1 rounded-xl">
@@ -344,9 +344,10 @@ function App() {
             {randomVertical && (
               <div
                 className={
-                  "basis-4/12 sm:rounded-3xl rounded-lg bg-contain bg-center sm:ms-5 ms-2 relative"
+                  "basis-4/12 sm:rounded-3xl rounded-lg bg-cover bg-center sm:ms-5 ms-2 relative"
                 }
                 style={{ backgroundImage: `url(${randomVertical.url})` }}
+                alt={randomVertical.alt}
               >
                 <div className="absolute w-full h-full top-0 flex flex-col justify-end content-start opacity-0 hover:opacity-100 translate-y-1 hover:translate-y-0 transition ease-in-out">
                   <div className="bg-slate-50 font-inter lg:text-sm md:text-cs text-xs font-medium text-black flex-initial w-fit sm:mb-5 sm:mx-5 sm:px-3 sm:py-2 mb-3 mx-2 px-3 py-1 rounded-xl">
