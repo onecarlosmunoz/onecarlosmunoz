@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -151,7 +149,6 @@ function App() {
           {/*  */}
           <div className="rounded-3xl md:px-5 md:py-5 sm:px-5 sm:py-3 px-0 py-0 sm:hover:bg-slate-50 hover:bg-white sm:bg-transparent bg-white transition ease-in-out">
             <div
-              href="#"
               className="flex flex-row transition ease-in-out"
             >
               <div className="sm:basis-2/12 basis-20 gradient-background sm:rounded-3xl rounded-lg bg-cover animate-object-09"></div>
@@ -219,9 +216,9 @@ function App() {
           </div>
           <div className="animate-object-14 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-transparent bg-slate-50 transition ease-in-out">
             <a
+              target="_blank"
               href="https://vasquezbpo.com/"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
-              target="_blank"
             >
               <div className="sm:basis-2/12 basis-0 bg-[url('/vasquez.png')] sm:rounded-3xl rounded-lg bg-cover bg-right"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
@@ -256,9 +253,9 @@ function App() {
           </div>
           <div className="animate-object-16 sm:rounded-3xl rounded-lg md:px-5 md:py-5 px-5 py-3 hover:bg-slate-50 sm:bg-white bg-slate-50 transition ease-in-out mt-10">
           <a
+              target="_blank"
               href="https://catherine-tans-website.webflow.io/"
               className="flex flex-row hover:scale-[0.99] transition ease-in-out"
-              target="_blank"
             >
               <div className="sm:basis-2/12 basis-0 bg-[url('/cathy.png')] sm:rounded-3xl rounded-lg bg-cover bg-left"></div>
               <div className="sm:basis-10/12 basis-full pt-2 sm:ps-8 ps-0">
@@ -322,7 +319,7 @@ function App() {
                 C#.
                 <br></br>
                 <br></br>
-                <a href="#">
+                <a onclick="window.open(this.href,'_blank');return false;" href="/Resume - Juan Carlos Munoz.pdf" target="_blank">
                   <p className="underline">Download my resume</p>
                 </a>
               </div>
@@ -425,7 +422,7 @@ function App() {
               <p className="md:text-base sm:text-sm text-sm text-white sm:mb-20 mb-10">
                 Catbalogan, Samar
               </p>
-              <a href="https://www.linkedin.com/in/munozjuancarlos/">
+              <a target="_blank" href="https://www.linkedin.com/in/munozjuancarlos/">
                 <img
                   src="/linkedin.svg"
                   alt=""
