@@ -44,7 +44,7 @@ function App() {
     { url: "/horizontal-3.jpg", location: "BGC, NCR", id: 3 },
     { url: "/horizontal-4.jpg", location: "Metro Manila, NCR", id: 4 },
     { url: "/horizontal-5.jpg", location: "Quezon City, NCR", id: 5 },
-    { url: "/horizontal-6.jpg", location: "Mandaluyong City, NCR", id: 6 },
+    { url: "/horizontal-6.jpg", location: "Mandaluyong, NCR", id: 6 },
     { url: "/horizontal-7.jpg", location: "Catbalogan, Samar", id: 7 },
     { url: "/horizontal-8.jpg", location: "Catbalogan, Samar", id: 8 },
     { url: "/horizontal-9.jpg", location: "Catbalogan, Samar", id: 9 },
@@ -388,7 +388,10 @@ function App() {
             </p>
           </div>
         </section>
-        <section id="contact" className="lg:px-16 md:px-8 sm:px-6 px-0 animate-object-20">
+        <section
+          id="contact"
+          className="lg:px-16 md:px-8 sm:px-6 px-0 animate-object-20"
+        >
           <h1 className="lg:text-8xl md:text-6xl sm:text-5xl text-3xl font-poppins font-bold text-black tracking-tighter text-center lg:mt-48 md:mt-32 sm:mt-28 mt-24 leading-tight">
             Get in touch.
           </h1>
